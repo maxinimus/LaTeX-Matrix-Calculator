@@ -22,8 +22,7 @@ def matrix():
 
     return {'rank': str(rank), 
             'determinant': str(determinant), 
-            
-            'eigenvalues': eigenvalues,
+            'eigenvalues': str(eigenvalues),
             'inverse': str(inverse), 
             'echelon': str(echelon)}
 

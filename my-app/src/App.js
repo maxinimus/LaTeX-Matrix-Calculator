@@ -10,7 +10,7 @@ function SubmitButton({ onMatrixUpdate }) {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({input_string: inputString})
-    })
+    }, [])
     .then(response => response.json())
     .then(data => {
       onMatrixUpdate(
@@ -70,20 +70,20 @@ function App() {
       <p className='field'>Rank: {rank} </p>
       <p className='field'>Determinant: {determinant} </p>
       {(eigenvalues !== "error" && eigenvalues !== "0") ? (<p className='field'> The eigenvalues are </p>) : (null)}
-      {/* {(eigenvalues !== "error" && eigenvalues !== "0") ? (<Latex> {"$" + eigenvalues + "$"} </Latex>) : (null)} */}
+      {(eigenvalues !== '0' && eigenvalues !== 'error') ? (<Latex>{"$" + eigenvalues + "$"}</Latex>) : (null)}
 
       {/* use alert to alert the user if there is an error */}
       {(inverse === 'error') ? (alert('Error: your input is incorrectly formatted')) : (null)}
 
       {/* Show the inverse of the inputted matrix */}
-      {(inverse !== '0' && inverse !== 'error') ? (<p> The inverse is </p>) : (null)}
+      {(inverse !== '0' && inverse !== 'error') ? (<p className='field'> The inverse is </p>) : (null)}
       {(inverse === '0' || inverse === 'error') ? (<p className='field'>The inverse does not exist</p>) : (null)}
 
       {(inverse !== '0' && inverse !== 'error') ? (<Latex>{"$" + inverse + "$"}</Latex>) : (null)}
       {(inverse !== '0' && inverse !== 'error') ? (<CopyButton value={inverse} />) : (null)}
       
       {/* Show the echelon form of the inputted matrix */}
-      {(echelon !== '0' && echelon !== 'error') ? (<p> The echelon form is </p>) : (null)}
+      {(echelon !== '0' && echelon !== 'error') ? (<p className='field'> The echelon form is </p>) : (null)}
       {(echelon === '0' || echelon === 'error') ? (<p className='field'>Echelon form does not exist</p>) : (null)}
 
       {(echelon !== '0' && echelon !== 'error') ? (<Latex>{"$" + echelon + "$"}</Latex>) : (null)}
