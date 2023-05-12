@@ -97,9 +97,9 @@ def get_eigenvalues(matrix):
         str = ""
         for i, eigenvalue in enumerate(eigenvalues):
             str += "\\lambda_{} = {}".format(i + 1, eigenvalue)
-            # if (i != len(eigenvalues) - 1):
-                # str += " \\\\ "
-            str += "\n"
+            if (i != len(eigenvalues) - 1):
+                str += ", "
+            # str += "\n"
 
         return str
     
