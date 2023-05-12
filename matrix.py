@@ -99,6 +99,7 @@ def get_eigenvalues(matrix):
             str += "\\lambda_{} = {}".format(i + 1, eigenvalue)
             if (i != len(eigenvalues) - 1):
                 str += " \\\\ "
+            str += "\n"
 
         return str
     
