@@ -85,23 +85,24 @@ def get_determinant(matrix):
 
 # Get eigenvalues of matrix
 def get_eigenvalues(matrix):
-    if matrix.shape == (0,):
+    if matrix.shape == (0,) or matrix.shape == (1,):
         return 0
     if (get_rows(matrix) != get_columns(matrix)):
         return 0
     else:
         eigenvalues = np.linalg.eigvals(matrix)
         for i, eigenvalue in enumerate(eigenvalues):
-            eigenvalues[i] = round(eigenvalue, 2)
+            eigenvalues[i] = np.round(eigenvalue, 2)
         # put eigenvalues into a string including the latex code
         str = ""
         for i, eigenvalue in enumerate(eigenvalues):
             str_eigenvalue = "{:.2f}".format(eigenvalue)
-            # if the part with the j is 0, then just remove it 
-            if (str_eigenvalue[-3:] == "+0.00j" or str_eigenvalue[-3:] == "-0.00j"):
-                str_eigenvalue = str_eigenvalue[:-5]
-            # change all js to i in the string
             str_eigenvalue = str_eigenvalue.replace('j', 'i')
+
+            # if the part with the i is 0, then just remove it 
+            if (str_eigenvalue[-5:] == "0.00i"):
+                str_eigenvalue = str_eigenvalue[:-6]
+            # change all js to i in the string
 
             str += "\\lambda_{} = {}".format(i + 1, str_eigenvalue)
             if (i != len(eigenvalues) - 1):
