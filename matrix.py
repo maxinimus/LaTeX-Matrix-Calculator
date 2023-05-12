@@ -88,12 +88,19 @@ def get_eigenvalues(matrix):
     if matrix.shape == (0,):
         return 0
     if (get_rows(matrix) != get_columns(matrix)):
-        return "Matrix is not square"
+        return 0
     else:
         eigenvalues = np.linalg.eigvals(matrix)
         for i, eigenvalue in enumerate(eigenvalues):
             eigenvalues[i] = round(eigenvalue, 2)
-        return eigenvalues
+        # put eigenvalues into a string including the latex code
+        str = ""
+        for i, eigenvalue in enumerate(eigenvalues):
+            str += "$\\lambda_{} = {}$".format(i + 1, eigenvalue)
+            if (i != len(eigenvalues) - 1):
+                str += ", "
+
+        return str
     
 # Get inverse of matrix
 def get_inverse(matrix):
