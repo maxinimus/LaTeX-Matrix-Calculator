@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/matrix',
     createProxyMiddleware({
-      target: 'http://127.0.0.1:5000/',
+      target: 'https://desolate-coast-38022.herokuapp.com/',
       changeOrigin: true,
     })
   );
