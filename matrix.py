@@ -97,6 +97,9 @@ def get_eigenvalues(matrix):
         str = ""
         for i, eigenvalue in enumerate(eigenvalues):
             str_eigenvalue = "{:.2f}".format(eigenvalue)
+            # if the part with the j is 0, then just remove it 
+            if (str_eigenvalue[-3:] == "+0.00j" or str_eigenvalue[-3:] == "-0.00j"):
+                str_eigenvalue = str_eigenvalue[:-5]
             # change all js to i in the string
             str_eigenvalue = str_eigenvalue.replace('j', 'i')
 
