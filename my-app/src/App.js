@@ -69,7 +69,8 @@ function App() {
       {/* Show the rank, determinant and eigenvalues of the inputted matrix */}
       <p className='field'>Rank: {rank} </p>
       <p className='field'>Determinant: {determinant} </p>
-      {(eigenvalues !== "[]") ? (<p className='field'> The eigenvalues are <Latex> {eigenvalues}</Latex></p>) : (null)}
+      {(eigenvalues !== "error" && eigenvalues !== "0") ? (<p className='field'> The eigenvalues are </p>) : (null)}
+      {(eigenvalues !== "error" && eigenvalues !== "0") ? (<Latex> {"$" + eigenvalues + "$"} </Latex>) : (null)}
 
       {/* use alert to alert the user if there is an error */}
       {(inverse === 'error') ? (alert('Error: your input is incorrectly formatted')) : (null)}

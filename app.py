@@ -12,7 +12,7 @@ def matrix():
     input_string = request.json['input_string']
     matrix = m.get_matrix(input_string)
     if matrix.shape == (1, ):
-        return {'rank': 'error', 'determinant': 'error', 'inverse': 'error', 'echelon': 'error'}
+        return {'rank': 'error', 'determinant': 'error', 'eigenvalues': 'error', 'inverse': 'error', 'echelon': 'error'}
     
     rank = m.get_rank(matrix)
     determinant = m.get_determinant(matrix)
@@ -22,7 +22,8 @@ def matrix():
 
     return {'rank': str(rank), 
             'determinant': str(determinant), 
-            'eigenvalues': str(eigenvalues),
+            
+            'eigenvalues': eigenvalues,
             'inverse': str(inverse), 
             'echelon': str(echelon)}
 

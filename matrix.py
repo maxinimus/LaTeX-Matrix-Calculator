@@ -96,9 +96,9 @@ def get_eigenvalues(matrix):
         # put eigenvalues into a string including the latex code
         str = ""
         for i, eigenvalue in enumerate(eigenvalues):
-            str += "$\\lambda_{} = {}$".format(i + 1, eigenvalue)
+            str += "\\lambda_{} = {}".format(i + 1, eigenvalue)
             if (i != len(eigenvalues) - 1):
-                str += ", "
+                str += "\n"
 
         return str
     
