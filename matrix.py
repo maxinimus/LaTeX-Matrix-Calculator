@@ -96,7 +96,11 @@ def get_eigenvalues(matrix):
         # put eigenvalues into a string including the latex code
         str = ""
         for i, eigenvalue in enumerate(eigenvalues):
-            str += "\\lambda_{} = {}".format(i + 1, eigenvalue)
+            str_eigenvalue = "{:.2f}".format(eigenvalue)
+            # change all js to i in the string
+            str_eigenvalue = str_eigenvalue.replace('j', 'i')
+
+            str += "\\lambda_{} = {}".format(i + 1, str_eigenvalue)
             if (i != len(eigenvalues) - 1):
                 str += "\\\\"
             
