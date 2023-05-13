@@ -1,5 +1,4 @@
 .App-header {
-  /* background-color: #282c34; */
   background-color: #161921;
   min-height: 100vh;
   display: flex;
@@ -17,7 +16,6 @@
   width: 30%; 
   margin-top: 10px;
   margin-bottom: 20px;
-  /* background-color: #23262e; */
   background-color: #11151b;
   color: white;
   border: 1px solid #ccc;
