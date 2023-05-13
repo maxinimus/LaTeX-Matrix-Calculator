@@ -62,7 +62,7 @@ function App() {
 
   return (
     <div className="App-header">
-      <p className='text'>Input <Latex> $\LaTeX$</Latex> matrix code here</p>
+      <p className='text'>Input <Latex> $\LaTeX$ </Latex> matrix code here</p>
       <textarea className='input' />
       <SubmitButton onMatrixUpdate={handleMatrixUpdate} />
       
