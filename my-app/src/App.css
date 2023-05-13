@@ -1,5 +1,6 @@
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-color: #161921;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,7 +17,8 @@
   width: 30%; 
   margin-top: 10px;
   margin-bottom: 20px;
-  background-color: #23262e;
+  /* background-color: #23262e; */
+  background-color: #11151b;
   color: white;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -51,7 +53,7 @@
 }
 
 .button {
-  background-color: #23262e;
+  background-color: #11151b;
   color: white;
   padding: 15px 30px;
   margin-top: 10px;
