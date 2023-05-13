@@ -39,7 +39,7 @@ function CopyButton( { value }) {
 
   return (
     <button className='button' onClick={handleClick}>
-      Copy LaTeX Code
+      Copy <Latex> $\LaTeX$ </Latex> Code
     </button>
   )
 }
@@ -62,7 +62,7 @@ function App() {
 
   return (
     <div className="App-header">
-      <p className='text'>Input LaTeX matrix code here</p>
+      <p className='text'>Input <Latex> $\LaTeX$</Latex> matrix code here</p>
       <textarea className='input' />
       <SubmitButton onMatrixUpdate={handleMatrixUpdate} />
       
@@ -87,8 +87,7 @@ function App() {
       {(echelon === '0' || echelon === 'error') ? (<p className='field'>Echelon form does not exist</p>) : (null)}
 
       {(echelon !== '0' && echelon !== 'error') ? (<Latex>{"$" + echelon + "$"}</Latex>) : (null)}
-      {(echelon !== '0' && echelon !== 'error') ? (<CopyButton value={echelon} />) : (null)}
-      
+      {(echelon !== '0' && echelon !== 'error') ? (<CopyButton value={echelon} />) : (null)}      
     </div>
   );
 }
