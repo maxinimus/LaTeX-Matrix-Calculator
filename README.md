@@ -12,8 +12,7 @@ The website has a text window where users can enter the latex code of a matrix. 
 \end{array}\right]
 </code></pre>
 or 
-<pre><code>
-\begin{bmatrix*}
+<pre><code>\begin{bmatrix*}
 4 & -4 & 2 \\
 -4 & 4 & -2 \\
 2 & -2 & 1
