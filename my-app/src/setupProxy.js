@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/matrix',
     createProxyMiddleware({
-      target: 'https://desolate-coast-38022.herokuapp.com/',
+      target: 'https://latex-matrix-calculator.herokuapp.com/',
       changeOrigin: true,
     })
   );
