@@ -11,6 +11,14 @@ The website has a text window where users can enter the latex code of a matrix. 
 2 & -2 & 1
 \end{array}\right]
 </code></pre>
+or 
+<pre><code>
+\begin{bmatrix*}
+4 & -4 & 2 \\
+-4 & 4 & -2 \\
+2 & -2 & 1
+\end{bmatrix*}
+</code></pre>
 
 
 Once the matrix code is entered, the user can click on the submit button to perform various operations on the matrix. The server then executes the `get_matrix` function that converts the latex matrix code into a numpy matrix. The following operations can be performed on the matrix:
