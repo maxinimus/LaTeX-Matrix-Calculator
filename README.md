@@ -5,6 +5,7 @@ This website is a matrix calculator that allows users to enter the latex code of
 ## Features
 
 The website has a text window where users can enter the latex code of a matrix. The supported matrix environments include `bmatrix`, `array`, and others. The entries of the matrix should be separated by `&`, and each line except the last one needs to have `\\` at the end like so
+
 `\left[\begin{array}{ccc}
 
 4 & -4 & 2 \\ 
