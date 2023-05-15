@@ -18,7 +18,7 @@ or
 2 & -2 & 1
 \end{bmatrix}
 </code></pre>
-
+In fact, the first and last lines don't even matter. Just make sure the lines between them are correctly formatted.
 
 Once the matrix code is entered, the user can click on the submit button to perform various operations on the matrix. The server then executes the `get_matrix` function that converts the latex matrix code into a numpy matrix. The following operations can be performed on the matrix:
 
