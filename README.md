@@ -1,7 +1,5 @@
 # LaTeX-Matrix-Calculator
 
-# Latex Matrix Calculator
-
 This website is a matrix calculator that allows users to enter the latex code of a matrix and perform various operations on it. The website is built using the React framework and Flask framework for Python.
 
 ## Features
