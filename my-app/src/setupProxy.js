@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/matrix',
     createProxyMiddleware({
-      target: 'https://latex-matrix-calculator.herokuapp.com/',
+      target: 'localhost:5000/',
       changeOrigin: true,
     })
   );

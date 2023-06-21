@@ -1,39 +1,64 @@
 # LaTeX-Matrix-Calculator
 
-This website is a matrix calculator that allows users to enter the latex code of a matrix and perform various operations on it. The website is built using the React framework and Flask framework for Python.
+This project is a matrix calculator that allows users to enter LaTeX code representing a matrix and perform various operations on it. It is built using the React framework for the frontend and Flask framework for the backend.
 
-## Features
+## Prerequisites
 
-The website has a text window where users can enter the latex code of a matrix. The supported matrix environments include `bmatrix`, `array`, and others. The entries of the matrix should be separated by `&`, and each line except the last one needs to have `\\` at the end like so
-<pre><code>\left[\begin{array}{ccc}
-4 & -4 & 2 \\
--4 & 4 & -2 \\
-2 & -2 & 1
-\end{array}\right]
-</code></pre>
-or 
-<pre><code>\begin{bmatrix}
-4 & -4 & 2 \\
--4 & 4 & -2 \\
-2 & -2 & 1
-\end{bmatrix}
-</code></pre>
-In fact, the first and last lines don't even matter. Just make sure the lines between them are correctly formatted.
+Before running this project, ensure that you have the following prerequisites installed:
 
-Once the matrix code is entered, the user can click on the submit button to perform various operations on the matrix. The server then executes the `get_matrix` function that converts the latex matrix code into a numpy matrix. The following operations can be performed on the matrix:
+- Python
+- Git
 
-- Rank calculation
-- Determinant calculation
-- Eigenvalue calculation
-- Inverse calculation
-- Echelon form calculation
+## Installation
 
-All the calculated data is displayed on the website, along with a copy latex code button that can be used to copy the latex code of the inverse of the matrix and the echelon form of the matrix. This makes it easy to copy and paste the matrices into your file.
+To get started with the matrix calculator, follow these steps:
+
+1. Clone this repository to your local machine using the following command:
+
+   ```shell
+   git clone https://github.com/your-username/LaTeX-Matrix-Calculator.git
+    ```
+2. Navigate to the project directory:
+
+   ```shell
+   cd LaTeX-Matrix-Calculator
+   ```
+
+3. Install the required dependencies for the backend server by running the following command:
+
+    ```shell
+    pip install -r requirements.txt
+    ```
+
+4. Install the required dependencies for the frontend by running the following command:
+
+    ```shell
+    npm install
+    ```
 
 ## Usage
 
-To use the website, simply navigate to https://latex-matrix-calculator.herokuapp.com/ and enter the latex code of the matrix in the text window. Once the code is entered, click on the submit button to perform the desired operation on the matrix. The results will be displayed on the website.
+To use the matrix calculator, follow these steps:
 
-## Technical Details
+1. Start the backend server by running the following command:
 
-The website is built using the React framework for the frontend and Flask framework for Python on the backend. The server executes the `get_matrix` function to convert the latex matrix code into a numpy matrix. The matrix operations are performed using the numpy and sympy libraries. The website is deployed on Heroku.
+   ```shell
+    python app.py
+    ```
+
+2. In a separate terminal window, start the frontend development server by running the following command in the `my-app` folder:
+
+   ```shell
+   npm start
+    ```
+3. Open your web browser and navigate to [http://localhost:3000](http://localhost:3000).
+
+4. Enter the LaTeX code of the matrix in the text window, following the supported matrix format.
+
+5. Click on the submit button to perform the desired operation on the matrix.
+
+6. The results will be displayed on the website, including the calculated data and the LaTeX code of the inverse and echelon form matrices.
+
+## Contributing
+
+Contributions to this project are welcome. If you have any suggestions or would like to add new features, please create a new issue or submit a pull request.
