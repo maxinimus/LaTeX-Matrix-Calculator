@@ -46,7 +46,7 @@ To use the matrix calculator, follow these steps:
     python app.py
     ```
 
-2. In a separate terminal window, start the frontend development server by running the following command in the `my-app` folder:
+2. In a separate terminal window, start the frontend development server by running the following command in the `my-app` folder:    
 
    ```shell
    npm start
