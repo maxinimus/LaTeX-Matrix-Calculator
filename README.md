@@ -40,24 +40,19 @@ To get started with the matrix calculator, follow these steps:
 
 To use the matrix calculator, follow these steps:
 
-1. Start the backend server by running the following command:
+1. To start, run the following command
 
    ```shell
-    python app.py
+    python3 app.py
     ```
 
-2. In a separate terminal window, start the frontend development server by running the following command in the `my-app` folder:    
+2. Open your web browser and navigate to [http://localhost:5000](http://localhost:5000).
 
-   ```shell
-   npm start
-    ```
-3. Open your web browser and navigate to [http://localhost:3000](http://localhost:3000).
+3. Enter the LaTeX code of the matrix in the text window, following the supported matrix format.
 
-4. Enter the LaTeX code of the matrix in the text window, following the supported matrix format.
+4. Click on the submit button to perform the desired operation on the matrix.
 
-5. Click on the submit button to perform the desired operation on the matrix.
-
-6. The results will be displayed on the website, including the calculated data and the LaTeX code of the inverse and echelon form matrices.
+5. The results will be displayed on the website, including the calculated data and the LaTeX code of the inverse and echelon form matrices.
 
 ## Contributing
 
